@@ -1,0 +1,7 @@
+FROM java:8
+LABEL AUTHOR=mani@example.com
+LABEL VERSION=1.0
+WORKDIR /
+ADD ManiPipelineJob-1.0-SNAPSHOT.jar ManiPipelineJob-1.0-SNAPSHOT.jar
+EXPOSE 8080
+CMD java - jar ManiPipelineJob-1.0-SNAPSHOT.jar
