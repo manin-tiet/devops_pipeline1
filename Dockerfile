@@ -1,4 +1,4 @@
-FROM java:8
+FROM openjdk:latest
 LABEL AUTHOR=mani@example.com
 LABEL VERSION=1.0
 WORKDIR /
