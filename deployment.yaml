@@ -2,10 +2,17 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: manideployment #The name of the Kubernetes Deployment to be created in the Kubernetes cluster
+  labels:
+    app: mani-java-app
 spec:
   replicas: 1 #The number of pods to be created in the Kubernetes cluster for the mani-java-app application container
+  selector:
+    matchLabels:
+      app: mani-java-app
   template:
     metadata:
+      labels:
+        app: mani-java-app
     spec:
       containers:
       - name: mani-java-app #The name of the mani-java-app application container
