@@ -1,14 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: deployment #The name of the Kubernetes Deployment to be created in the Kubernetes cluster
+  name: Mani-DockerImage-deployment-in-EKS #The name of the Kubernetes Deployment to be created in the Kubernetes cluster
   labels:
     app: mani-java-app
 spec:
-  replicas: 2 #The number of pods to be created in the Kubernetes cluster for the mani-java-app application container
-  selector:
-    matchLabels:
-      app: mani-java-app
+  replicas: 1 #The number of pods to be created in the Kubernetes cluster for the mani-java-app application container
   template:
     metadata:
       labels:
@@ -16,6 +13,6 @@ spec:
     spec:
       containers:
       - name: mani-java-app #The name of the mani-java-app application container
-        image: manindertiet/maniprivaterepo:latest #The Docker image for building the React.js application container
+        image: manindertiet/maniprivaterepo:latest #The Docker image for building the mani-java-app application container
         ports:
-        - containerPort: 3000 #The port for the mani-java-app application   container
+        - containerPort: 3000 #The port for the mani-java-app application container
