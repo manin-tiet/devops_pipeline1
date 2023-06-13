@@ -4,6 +4,7 @@ metadata:
   name: manideployment #The name of the Kubernetes Deployment to be created in the Kubernetes cluster
   labels:
     app: mani-java-app
+  namespace: devops-tools
 spec:
   replicas: 1 #The number of pods to be created in the Kubernetes cluster for the mani-java-app application container
   selector:
@@ -17,6 +18,7 @@ spec:
       containers:
       - name: mani-java-app #The name of the mani-java-app application container
         image: manindertiet/maniprivaterepo:latest #The Docker image for building the mani-java-app application container
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 3000 #The port for the mani-java-app application container
       imagePullSecrets:
