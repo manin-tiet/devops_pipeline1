@@ -19,3 +19,5 @@ spec:
         image: manindertiet/maniprivaterepo:latest #The Docker image for building the mani-java-app application container
         ports:
         - containerPort: 3000 #The port for the mani-java-app application container
+      imagePullSecrets:
+      - name: dockerhubcredkube
