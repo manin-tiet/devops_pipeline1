@@ -15,6 +15,7 @@ spec:
       labels:
         app: mani-java-app
     spec:
+      serviceAccountName: jenkins-robot
       containers:
       - name: mani-java-app #The name of the mani-java-app application container
         image: manindertiet/maniprivaterepo:latest #The Docker image for building the mani-java-app application container
