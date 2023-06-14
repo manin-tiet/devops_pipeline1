@@ -16,8 +16,8 @@ class PrintString{
 		System.out.println("Enter the Name:");
 		
 		String aname = br.readLine();
-		if(name==null)
-		{ name = "There!"; }
+		if(aname==null)
+		{ aname = "There!"; }
 			
 		pn.setQuote(aname);
 	}
