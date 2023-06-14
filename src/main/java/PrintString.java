@@ -17,7 +17,7 @@ class PrintString{
 		
 		String aname = br.readLine();
 		if(name==null)
-		{ name = "There!" }
+		{ name = "There!"; }
 			
 		pn.setQuote(aname);
 	}
