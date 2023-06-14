@@ -1,3 +1,4 @@
+package com.company.app;
 import java.io.*;
 
 class PrintName{
