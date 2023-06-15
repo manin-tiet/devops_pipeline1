@@ -6,7 +6,7 @@ metadata:
     app: mani-java-app
   namespace: devops-tools
 spec:
-  replicas: 1 #The number of pods to be created in the Kubernetes cluster for the mani-java-app application container
+  #replicas: 1 #The number of pods to be created in the Kubernetes cluster for the mani-java-app application container
   selector:
     matchLabels:
       app: mani-java-app
